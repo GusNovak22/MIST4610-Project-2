@@ -29,4 +29,6 @@ This dashboard provides a comprehensive operational overview of flight activity,
 
 Status of Flights: This visual shows the distribution of flights that were on time, delayed, or cancelled. For Jackson Hole airport, this metric is especially important because the airport is located in a mountainous region where weather conditions, such as snow, fog, and winter storms can significantly disrupt flight operations. Monitoring the proportion of delayed or cancelled flights helps airport management identify operational challenges and determine whether issues stem from weather patterns, airline performance, or ground handling constraints. A high 'on-time' rate is vital for maintaining passenger satisfaction, especially given that Jackson Hole is heavily dependent on tourism during winter ski season. 
 
-Number of Flights Departing in January:
+Number of Flights Departing in January: This chart highlights the number of flights departing each day in early January, a critical time for Jackson Hole due to high tourism. Understanding daily flight volume helps the airport anticipate operational demand such as gate usage, runway scheduling, staffing levels, baggage handling and more. Variations in flight counts across the month can indicate tourist patterns, weather events, or scheduling adjustments. Tracking departures allows airport management to optimize travel resources during a busy season such as January.
+
+
