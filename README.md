@@ -19,6 +19,7 @@ The Employees table stores airport staff such as TSA officers, ground crew, gate
 <img width="665" height="583" alt="Screenshot 2025-11-26 at 3 53 08 PM" src="https://github.com/user-attachments/assets/eb46bded-4ca4-412b-ae9d-a664a9fc336d" />
 <img width="648" height="821" alt="Screenshot 2025-11-26 at 3 53 21 PM" src="https://github.com/user-attachments/assets/698eeabd-5e14-438b-b506-67faa1e845f1" />
 
+
 Data Visualizations:
 
 <img width="1201" height="685" alt="image" src="https://github.com/user-attachments/assets/68fc3bb9-a41c-4ac2-90d3-56cfdd5dfa9f" />
