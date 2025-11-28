@@ -19,4 +19,13 @@ The Employees table stores airport staff such as TSA officers, ground crew, gate
 <img width="665" height="583" alt="Screenshot 2025-11-26 at 3 53 08 PM" src="https://github.com/user-attachments/assets/eb46bded-4ca4-412b-ae9d-a664a9fc336d" />
 <img width="648" height="821" alt="Screenshot 2025-11-26 at 3 53 21 PM" src="https://github.com/user-attachments/assets/698eeabd-5e14-438b-b506-67faa1e845f1" />
 
+Data Visualizations:
 
+<img width="1201" height="685" alt="image" src="https://github.com/user-attachments/assets/68fc3bb9-a41c-4ac2-90d3-56cfdd5dfa9f" />
+
+Executive Summary of Dashboard: 
+This dashboard provides a comprehensive operational overview of flight activity, workforce distribution, and airline performance at Jackson Hole Airport. By integrating flight records, employee data, and airline schedules, the dashboard delivers insights into the airport's operational efficiency during the early January travel period, one of the buusiest months for Jackson Hole due to winter tourism. The visualizations highlight three critical areas: flight reliability, daily traffic patterns, and resource allocation. 
+
+Status of Flights: This visual shows the distribution of flights that were on time, delayed, or cancelled. For Jackson Hole airport, this metric is especially important because the airport is located in a mountainous region where weather conditions, such as snow, fog, and winter storms can significantly disrupt flight operations. Monitoring the proportion of delayed or cancelled flights helps airport management identify operational challenges and determine whether issues stem from weather patterns, airline performance, or ground handling constraints. A high 'on-time' rate is vital for maintaining passenger satisfaction, especially given that Jackson Hole is heavily dependent on tourism during winter ski season. 
+
+Number of Flights Departing in January:
