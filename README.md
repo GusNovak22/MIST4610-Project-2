@@ -62,3 +62,5 @@ Query #2: Which gates at Denver International Airport have more than three passe
 
    This query pulls Gate details and the count of passengers for these gates. The query first joins the Passengers_has_Flight table and Flight table using FlightNumber. The Gate table is then joined using the ID of the departing gates. Finally, the Airport table is joined using AirportID. Once all these tables are pulled, we apply the contraint that the name of the Airport must include the word "Denver" using the REGEXP command. We then group the data by GateNumber in order to seperate the output into the desired format where each individual Gate has a seperate count of passengers. The HAVING clause guarentees that we are only shown the gates that have more than three passengers passing through. This data is valuable for Denver International Airport because if they decide to add on resturants and stores to certain gates, they can know which ones are passed through more.
 
+Query #3: Who are the Managers of the maintence department and how many subordinates do they have?
+
