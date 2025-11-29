@@ -31,8 +31,7 @@ The Baggage table tracks all checked and carry on luggage associated with passen
 The AirportEmp table stores airport staff such as TSA officers, ground crew, gate agents, and maintenance workers. Each Employee is assigned to a single Airport, forming a one to many relationship between Airports and Employees. The AirportEmp table tracks the information of all employees at the airports. It maintains a unique identifier for each employee and tracks data such as first and last name and department the employee works for. This entity maintains a one to one recursive relationship with itself to account for the relationship of some employees as others' boss. 
 
 
-<img width="654" height="561" alt="image" src="https://github.com/user-attachments/assets/91a7a709-3aec-42df-bde6-ee31731c6643" />
-
+<img width="641" height="541" alt="image" src="https://github.com/user-attachments/assets/d48fcad4-d38f-410a-852c-46166ec15f2a" />
 <img width="667" height="716" alt="Screenshot 2025-11-29 at 12 32 46 PM" src="https://github.com/user-attachments/assets/3addcefc-5881-4176-a0ea-4258d3b39025" />
 <img width="653" height="601" alt="Screenshot 2025-11-29 at 12 33 05 PM" src="https://github.com/user-attachments/assets/02c80357-72d2-44d8-a4b1-6f9f3ca6b54a" />
 <img width="654" height="659" alt="Screenshot 2025-11-29 at 12 33 16 PM" src="https://github.com/user-attachments/assets/daf68bc6-777f-46bc-afe2-f25fe3ccd615" />
