@@ -10,7 +10,7 @@ Gus Novak | jan82663@uga.edu | [GusNovak22](https://github.com/GusNovak22)
 
 Caden Floyd | cadenfloyd7@uga.edu | [cflo-7](https://github.com/cflo-7)
 
-
+ 
 
 Data Model Explanation: 
 
