@@ -50,7 +50,7 @@ Query #1: What are the full names and arrival destination of passengers who have
 
   This query first pulls the first and last names from the Passengers table and presents them together to show their PassengerName. The query then joins the Passengers_has_Flight table using the PassengerID data, the Flight table is then joined using PassengerID as well. The Airport entity is then joined using the ID of the airport the passengers are arriving at. This allows us to pull the location details from the Airport entity. The EXISTS statement includes passengers who have "Checked" baggage type in the Baggage table by joining the two tables on PassengerID. The data is then put in descending order in order to keep the flights grouped together. This information is useful to management because they determine "vacation" destinations and assign more resources and staff to these flights to account for more checked baggage. Management can also track down Passengers who have unclaimed luggage.
 
-Query #2: Which gates at Denver International Airport have more than three passengers visit and how many total passengers visit?
+Query #2: Which gates at Denver International Airport have more than three passengers pass through and how many total?
 
     SELECT GateNumber, GateName, COUNT(PassengerID) as #ofPassengers from Passengers_has_Flight
     JOIN Flight ON Passengers_has_Flight.FlightNumber = Flight.FlightNumber
