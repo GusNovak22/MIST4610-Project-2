@@ -1,5 +1,15 @@
 # MIST4610-Project-2
 
+Team Members:
+
+Jake Rubenstein | Jacob.Rubenstein@uga.edu | [jakerubenstein27](https://github.com/jakerubenstein27)
+
+Kaveri Channappa | Kaveri.Channappa@uga.edu | [kaverichannappa](https://github.com/kaverichannappa)
+
+Gus Novak | jan82663@uga.edu | [GusNovak22](https://github.com/GusNovak22)
+
+Caden Floyd | cadenfloyd7@uga.edu | [cflo-7](https://github.com/cflo-7)
+
 Data Model Explanation: 
 
 This database models the core operational aspects of Jackson Hole Airport which serves as the primary commercial airport for Jackson, Wyoming and the surrounding Teton County region. Despite being a smaller airport, it plays a critical role in supporting both tourism and local transportation, particularly due to its proximity to Grand Teton National Park and Jackson Hole Mountain Resort. 
