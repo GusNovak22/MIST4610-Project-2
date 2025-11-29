@@ -36,18 +36,14 @@ Count of Employees by Department: This visual presents the number of employees w
 Number of Flights by Airline: This chart illustrates how many flights each airline operates at Jackson Hole Airport. Since JAC is a smaller regional airport served by a limited number of major carriers, such as Alaska Airlines, American Airlines, Delta, Sun Country, and United, understanding each airline's contribution to overall traffic is essential. This information helps the airport evaluate airline partnerships, route performance, and scheduling efficiency. It also supports capacity planning, negotiation of future routes, and ensuring that gate and ground operations meet the needs of the airlines with the highest traffic volumes. For an airport reliant on seasonal tourism, knowing which carriers drive the most passenger traffic informs planning and strategic growth decisions. 
 
 Query #1: What are the full names and arrival destination of passengers who have checked baggage?
-SELECT CONCAT(FName, ' ',LName) AS PassengerName, City, StateAbbreviation, Airport.Country 
-  FROM Passengers
-  JOIN Passengers_has_Flight 
-  ON Passengers.PassengerID = Passengers_has_Flight.PassengerID
-  JOIN Flight 
-  ON Passengers_has_Flight.FlightNumber = Flight.FlightNumber
-  JOIN Airport 
-  ON Flight.ArrivalAirportID = Airport.AirportID
-  WHERE EXISTS 
-  (SELECT * FROM Baggage WHERE Passengers.PassengerID = Baggage.Passengers_PassengerID AND Type = "Checked")
-  ORDER BY FlightNumber DESC;
 
-This query first pulls the first and last names from the Passengers table and presents them together to show their PassengerName. The query then joins the Passengers_has_Flight table using the PassengerID data, the Flight table is then joined using PassengerID as well. The Airport entity is then joined using the ID of the airport the passengers are arriving at. The EXISTS statement includes passengers who have "Checked" baggage type in the Baggage table by joining the two tables on PassengerID. The data is then put in descending order in order to keep the flights grouped together. This information is useful to management because they determine "vacation" destinations and assign more resources and staff to these flights to account for more checked baggage. Management can also track down Passengers who have unclaimed luggage.
+    SELECT CONCAT(FName, ' ',LName) AS PassengerName, City, StateAbbreviation, Airport.Country FROM Passengers 
+    JOIN Passengers_has_Flight ON Passengers.PassengerID = Passengers_has_Flight.PassengerID
+    JOIN Flight ON Passengers_has_Flight.FlightNumber = Flight.FlightNumber
+    JOIN Airport ON Flight.ArrivalAirportID = Airport.AirportID
+    WHERE EXISTS (SELECT * FROM Baggage WHERE Passengers.PassengerID = Baggage.Passengers_PassengerID AND Type = "Checked")
+    ORDER BY FlightNumber DESC;
+
+  This query first pulls the first and last names from the Passengers table and presents them together to show their PassengerName. The query then joins the Passengers_has_Flight table using the PassengerID data, the Flight table is then joined using PassengerID as well. The Airport entity is then joined using the ID of the airport the passengers are arriving at. The EXISTS statement includes passengers who have "Checked" baggage type in the Baggage table by joining the two tables on PassengerID. The data is then put in descending order in order to keep the flights grouped together. This information is useful to management because they determine "vacation" destinations and assign more resources and staff to these flights to account for more checked baggage. Management can also track down Passengers who have unclaimed luggage.
 
 Query #2: 
