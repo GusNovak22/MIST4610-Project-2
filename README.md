@@ -28,9 +28,7 @@ Passengers traveling through the airport are stored in the Passengers table, whi
 
 The Baggage table tracks all checked and carry on luggage associated with passengers. Since Baggage can travel on multiple connecting Flights, and each flight carries many bags, their relationship is modeled using another associative entity that records which baggage is on which flight as well as the bag weight for that specific flight. 
 
-The Employees table stores airport staff such as TSA officers, ground crew, gate agents, and maintenance workers. Each Employee is assigned to a single Airport, forming a one to many relationship between Airports and Employees. 
-
-The AirportEmp table tracks the information of all employees at the airports. It maintains a unique identifier for each employee and trakcs data such as first and last name and department the employee works for. This entity maintains a one to one recursive relationship with itself to account for the relationship of some employees as others' boss. The table also has a one to many relationship with the Airport table to represent how an airport can have many employees, but an employee can only work for one airport.
+The AirportEmp table stores airport staff such as TSA officers, ground crew, gate agents, and maintenance workers. Each Employee is assigned to a single Airport, forming a one to many relationship between Airports and Employees. The AirportEmp table tracks the information of all employees at the airports. It maintains a unique identifier for each employee and tracks data such as first and last name and department the employee works for. This entity maintains a one to one recursive relationship with itself to account for the relationship of some employees as others' boss. 
 
 
 <img width="671" height="625" alt="Screenshot 2025-11-29 at 12 32 31 PM" src="https://github.com/user-attachments/assets/9a237d82-0495-4d67-b39f-d1858dfe3389" />
