@@ -32,6 +32,7 @@ The Employees table stores airport staff such as TSA officers, ground crew, gate
 
 The AirportEmp table tracks the information of all employees at the airports. It maintains a unique identifier for each employee and trakcs data such as first and last name and department the employee works for. This entity maintains a one to one recursive relationship with itself to account for the relationship of some employees as others' boss. The table also has a one to many relationship with the Airport table to represent how an airport can have many employees, but an employee can only work for one airport.
 
+
 <img width="671" height="625" alt="Screenshot 2025-11-29 at 12 32 31 PM" src="https://github.com/user-attachments/assets/9a237d82-0495-4d67-b39f-d1858dfe3389" />
 <img width="667" height="716" alt="Screenshot 2025-11-29 at 12 32 46 PM" src="https://github.com/user-attachments/assets/3addcefc-5881-4176-a0ea-4258d3b39025" />
 <img width="653" height="601" alt="Screenshot 2025-11-29 at 12 33 05 PM" src="https://github.com/user-attachments/assets/02c80357-72d2-44d8-a4b1-6f9f3ca6b54a" />
