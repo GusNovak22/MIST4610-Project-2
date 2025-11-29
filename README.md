@@ -32,10 +32,12 @@ The Employees table stores airport staff such as TSA officers, ground crew, gate
 
 The AirportEmp table tracks the information of all employees at the airports. It maintains a unique identifier for each employee and trakcs data such as first and last name and department the employee works for. This entity maintains a one to one recursive relationship with itself to account for the relationship of some employees as others' boss. The table also has a one to many relationship with the Airport table to represent how an airport can have many employees, but an employee can only work for one airport.
 
-<img width="652" height="813" alt="Screenshot 2025-11-26 at 3 52 42 PM" src="https://github.com/user-attachments/assets/15e5a2ba-a2a8-409e-a0e9-ac246eb658b7" />
-<img width="649" height="833" alt="Screenshot 2025-11-26 at 3 52 57 PM" src="https://github.com/user-attachments/assets/0a3fab7f-565f-4ea0-bbf1-d37bc90e7d94" />
-<img width="665" height="583" alt="Screenshot 2025-11-26 at 3 53 08 PM" src="https://github.com/user-attachments/assets/eb46bded-4ca4-412b-ae9d-a664a9fc336d" />
-<img width="648" height="821" alt="Screenshot 2025-11-26 at 3 53 21 PM" src="https://github.com/user-attachments/assets/698eeabd-5e14-438b-b506-67faa1e845f1" />
+<img width="671" height="625" alt="Screenshot 2025-11-29 at 12 32 31 PM" src="https://github.com/user-attachments/assets/9a237d82-0495-4d67-b39f-d1858dfe3389" />
+<img width="667" height="716" alt="Screenshot 2025-11-29 at 12 32 46 PM" src="https://github.com/user-attachments/assets/3addcefc-5881-4176-a0ea-4258d3b39025" />
+<img width="653" height="601" alt="Screenshot 2025-11-29 at 12 33 05 PM" src="https://github.com/user-attachments/assets/02c80357-72d2-44d8-a4b1-6f9f3ca6b54a" />
+<img width="654" height="659" alt="Screenshot 2025-11-29 at 12 33 16 PM" src="https://github.com/user-attachments/assets/daf68bc6-777f-46bc-afe2-f25fe3ccd615" />
+<img width="666" height="865" alt="Screenshot 2025-11-29 at 12 33 46 PM" src="https://github.com/user-attachments/assets/ddc25dd8-b2eb-4995-8218-05184d2bef3f" />
+
 
 
 Data Visualizations:
