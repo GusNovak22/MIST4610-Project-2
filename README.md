@@ -30,7 +30,18 @@ The Baggage table tracks all checked and carry on luggage associated with passen
 
 The AirportEmp table stores airport staff such as TSA officers, ground crew, gate agents, and maintenance workers. Each Employee is assigned to a single Airport, forming a one to many relationship between Airports and Employees. The AirportEmp table tracks the information of all employees at the airports. It maintains a unique identifier for each employee and tracks data such as first and last name and department the employee works for. This entity maintains a one to one recursive relationship with itself to account for the relationship of some employees as others' boss. 
 
+NEW
+<img width="648" height="619" alt="Screenshot 2025-11-29 at 8 13 34 PM" src="https://github.com/user-attachments/assets/aa237245-6872-4b33-897b-9bf0fbd02bb7" />
+<img width="636" height="619" alt="Screenshot 2025-11-29 at 8 18 45 PM" src="https://github.com/user-attachments/assets/a61d5b96-fbee-4109-904a-8ff3b0a48c72" />
+<img width="636" height="592" alt="Screenshot 2025-11-29 at 8 19 43 PM" src="https://github.com/user-attachments/assets/c025d616-dd1d-40a1-9971-3264fc26e555" />
+<img width="643" height="650" alt="Screenshot 2025-11-29 at 8 20 27 PM" src="https://github.com/user-attachments/assets/b7c6f7e4-3ffd-4264-b43d-028656fce1a1" />
+<img width="637" height="621" alt="Screenshot 2025-11-29 at 8 21 36 PM" src="https://github.com/user-attachments/assets/2b899bb8-d9a7-4bee-b5d7-b0fd
+<img width="637" height="228" alt="Screenshot 2025-11-29 at 8 22 18 PM" src="https://github.com/user-attachments/assets/9835aadf-6ede-474b-a2c5-b6287c4dc830" />
+2aefc473" />
 
+
+
+OLD
 <img width="641" height="541" alt="image" src="https://github.com/user-attachments/assets/d48fcad4-d38f-410a-852c-46166ec15f2a" />
 <img width="667" height="716" alt="Screenshot 2025-11-29 at 12 32 46 PM" src="https://github.com/user-attachments/assets/3addcefc-5881-4176-a0ea-4258d3b39025" />
 <img width="653" height="601" alt="Screenshot 2025-11-29 at 12 33 05 PM" src="https://github.com/user-attachments/assets/02c80357-72d2-44d8-a4b1-6f9f3ca6b54a" />
