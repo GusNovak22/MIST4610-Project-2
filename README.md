@@ -54,24 +54,24 @@ Number of Flights by Airline: This chart illustrates how many flights each airli
 
 Query #1: What are the full names and arrival destination of passengers who have checked baggage?
 
-    SELECT CONCAT(FName, ' ',LName) AS PassengerName, City, StateAbbreviation, Airport.Country FROM Passengers 
-    JOIN Passengers_has_Flight ON Passengers.PassengerID = Passengers_has_Flight.PassengerID
-    JOIN Flight ON Passengers_has_Flight.FlightNumber = Flight.FlightNumber
+    SELECT CONCAT(FName, ' ',LName) AS PassengerName, City, StateAbbreviation FROM Passenger 
+    JOIN Passenger_has_Flight ON Passenger.PassengerID = Passenger_has_Flight.PassengerID
+    JOIN Flight ON Passenger_has_Flight.FlightNumber = Flight.FlightNumber
     JOIN Airport ON Flight.ArrivalAirportID = Airport.AirportID
-    WHERE EXISTS (SELECT * FROM Baggage WHERE Passengers.PassengerID = Baggage.Passengers_PassengerID AND Type = "Checked")
-    ORDER BY FlightNumber DESC;
+    WHERE EXISTS (SELECT * FROM Baggage WHERE Passengers.PassengerID = Baggage.PassengerID AND Type = "Checked")
+    ORDER BY Flight.FlightNumber DESC;
 
   This query first pulls the first and last names from the Passengers table and presents them together to show their PassengerName. The query then joins the Passengers_has_Flight table using the PassengerID data, the Flight table is then joined using PassengerID as well. The Airport entity is then joined using the ID of the airport the passengers are arriving at. This allows us to pull the location details from the Airport entity. The EXISTS statement includes passengers who have "Checked" baggage type in the Baggage table by joining the two tables on PassengerID. The data is then put in descending order in order to keep the flights grouped together. This information is useful to management because they determine "vacation" destinations and assign more resources and staff to these flights to account for more checked baggage. Management can also track down Passengers who have unclaimed luggage.
 
 Query #2: Which gates at Denver International Airport have more than three passengers pass through and how many total?
 
-    SELECT GateNumber, GateName, COUNT(PassengerID) as #ofPassengers from Passengers_has_Flight
-    JOIN Flight ON Passengers_has_Flight.FlightNumber = Flight.FlightNumber
+    SELECT GateID, GateName, COUNT(PassengerID) as NumberofPassengers from Passenger_has_Flight
+    JOIN Flight ON Passenger_has_Flight.FlightNumber = Flight.FlightNumber
     JOIN Gate ON Flight.DepartureGateID = Gate.GateID
     JOIN Airport ON Gate.AirportID = Airport.AirportID
     WHERE City REGEXP "Denver"
-    GROUP BY GateNumber
-    HAVING #ofPassengers > 3;
+    GROUP BY GateID
+    HAVING NumberofPassengers > 3;
 
    This query pulls Gate details and the count of passengers for these gates. The query first joins the Passengers_has_Flight table and Flight table using FlightNumber. The Gate table is then joined using the ID of the departing gates. Finally, the Airport table is joined using AirportID. Once all these tables are pulled, we apply the contraint that the name of the Airport must include the word "Denver" using the REGEXP command. We then group the data by GateNumber in order to seperate the output into the desired format where each individual Gate has a seperate count of passengers. The HAVING clause guarentees that we are only shown the gates that have more than three passengers passing through. This data is valuable for Denver International Airport because if they decide to add on resturants and stores to certain gates, they can know which ones are passed through more.
 
@@ -79,9 +79,13 @@ Query #3: Who are the Managers of the maintence department at each airport and h
 
     SELECT AirportName, Boss.AirportEmpID, CONCAT(Boss.FNAME, ' ', Boss.LNAME) as DeptHeadName, COUNT(Emp.AirportEmpID) as SubordinateCount 
     FROM AirportEmp Boss 
-    JOIN AirportEmp Emp ON Boss.AirportEmpID = Emp.AirportEmpManagerID
+    JOIN AirportEmp Emp ON Boss.AirportEmpID = Emp.ManagerID
     JOIN Airport ON Boss.AirportID = Airport.AirportID
     WHERE Boss.Department = "Maintenance"
     GROUP BY Boss.AirportEmpID;
 
    This query pulls the full name of maintenance bosses at all airports and give the amount of employees they supervise. The query first performs a recursive join of the AirportEmp table creating a Boss and Emp copy. These tables are joined by The Boss table's AirportEmpID and the Emp table's AirportEmpManagerID. The Emp value represents who they report to which matches to another employee in the boss table. The Airport table is then joined so that the AirportName each manager works at can be pulled. The WHERE clause then adds a constraint in which we only pull managers of "Maintenance" departments. The GROUP BY clause ensures that the aggregated count function is grouped by the boss of each airport. This data would be useful for airport management to ensure proper supervision of subordinates and discipline for failure to meet maintenance standards.
+
+Query #4:
+
+Query #5:
