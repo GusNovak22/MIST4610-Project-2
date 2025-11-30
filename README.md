@@ -10,7 +10,7 @@ Gus Novak | jan82663@uga.edu | [GusNovak22](https://github.com/GusNovak22)
 
 Caden Floyd | cadenfloyd7@uga.edu | [cflo-7](https://github.com/cflo-7)
 
- 
+ <img width="945" height="743" alt="Screenshot 2025-11-29 at 8 27 33 PM" src="https://github.com/user-attachments/assets/5abf8173-4c9e-4e0e-8465-265eeed7217a" />
 
 Data Model Explanation: 
 
