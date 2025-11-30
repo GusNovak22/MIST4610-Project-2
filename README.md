@@ -1,4 +1,4 @@
-# MIST4610-Project-2
+[Query1Result.csv](https://github.com/user-attachments/files/23837174/Query1Result.csv)# MIST4610-Project-2
 
 Team Members:
 
@@ -60,6 +60,66 @@ Query #1: What are the full names and arrival destination of passengers who have
     JOIN Airport ON Flight.ArrivalAirportID = Airport.AirportID
     WHERE EXISTS (SELECT * FROM Baggage WHERE Passengers.PassengerID = Baggage.PassengerID AND Type = "Checked")
     ORDER BY Flight.FlightNumber DESC;
+
+[UplPassengerName,City,StateAbbreviation
+"Michael Taylor",Denver,CO
+"Naomi Barnes","Jackson Hole",WY
+"Grace Diaz","Jackson Hole",WY
+"Joseph Nelson","Jackson Hole",WY
+"Logan Lewis","Salt Lake City",UT
+"Alexander Flores",Dallas,TX
+"Stella Sanchez",Dallas,TX
+"Matthew Coleman",Denver,CO
+"Violet Rogers",Denver,CO
+"Emma Williams",Denver,CO
+"Scarlett Garcia","Jackson Hole",WY
+"Elijah Jackson","Salt Lake City",UT
+"Victoria Powell",Dallas,TX
+"Andrew Gray",Denver,CO
+"Lila Bennett","Jackson Hole",WY
+"Luke Rivera","Jackson Hole",WY
+"Nathan Reed",Dallas,TX
+"Penelope Perez",Dallas,TX
+"Ryan Morgan",Denver,CO
+"Eleanor Cox","Jackson Hole",WY
+"Lucy Sanders","Salt Lake City",UT
+"Samuel Mitchell",Dallas,TX
+"Zoe Collins",Denver,CO
+"Charlotte Wilson","Jackson Hole",WY
+"Ethan Clark","Salt Lake City",UT
+"Hazel Cooper","Salt Lake City",UT
+"David Scott",Dallas,TX
+"Ellie Jenkins",Dallas,TX
+"Caroline Russell",Dallas,TX
+"Elijah Bryant","Jackson Hole",WY
+"Amelia Thomas","Salt Lake City",UT
+"Madelyn Peterson",Dallas,TX
+"Daniel Ross",Denver,CO
+"Victoria Robinson","Salt Lake City",UT
+"Sophia Martinez",Dallas,TX
+"Aiden King",Dallas,TX
+"Jonathan Watson",Denver,CO
+"Anna Ward","Jackson Hole",WY
+"Matthew Adams","Jackson Hole",WY
+"Jacob Thompson","Jackson Hole",WY
+"Olivia Smith","Jackson Hole",WY
+"Mia Lopez","Salt Lake City",UT
+"Jackson Allen","Salt Lake City",UT
+"Christian Murphy","Salt Lake City",UT
+"Liam Patterson",Denver,CO
+"Ava Jones","Jackson Hole",WY
+"Owen Phillips","Salt Lake City",UT
+"Liam Johnson","Salt Lake City",UT
+"Henry Walker",Denver,CO
+"Isabella Davis",Denver,CO
+"Joshua Kelly",Denver,CO
+"Lucas Harris","Jackson Hole",WY
+"Caleb Edwards","Jackson Hole",WY
+"Jackson Foster","Jackson Hole",WY
+"Nora Turner",Dallas,TX
+"Wyatt Parker",Denver,CO
+oading Query1Result.csv…]()
+
 
   This query first pulls the first and last names from the Passengers table and presents them together to show their PassengerName. The query then joins the Passengers_has_Flight table using the PassengerID data, the Flight table is then joined using PassengerID as well. The Airport entity is then joined using the ID of the airport the passengers are arriving at. This allows us to pull the location details from the Airport entity. The EXISTS statement includes passengers who have "Checked" baggage type in the Baggage table by joining the two tables on PassengerID. The data is then put in descending order in order to keep the flights grouped together. This information is useful to management because they determine "vacation" destinations and assign more resources and staff to these flights to account for more checked baggage. Management can also track down Passengers who have unclaimed luggage.
 
