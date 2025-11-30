@@ -30,13 +30,12 @@ The Baggage table tracks all checked and carry on luggage associated with passen
 
 The AirportEmp table stores airport staff such as TSA officers, ground crew, gate agents, and maintenance workers. Each Employee is assigned to a single Airport, forming a one to many relationship between Airports and Employees. The AirportEmp table tracks the information of all employees at the airports. It maintains a unique identifier for each employee and tracks data such as first and last name and department the employee works for. This entity maintains a one to one recursive relationship with itself to account for the relationship of some employees as others' boss. 
 
-<img width="641" height="541" alt="image" src="https://github.com/user-attachments/assets/d48fcad4-d38f-410a-852c-46166ec15f2a" />
-<img width="667" height="716" alt="Screenshot 2025-11-29 at 12 32 46 PM" src="https://github.com/user-attachments/assets/3addcefc-5881-4176-a0ea-4258d3b39025" />
-<img width="653" height="601" alt="Screenshot 2025-11-29 at 12 33 05 PM" src="https://github.com/user-attachments/assets/02c80357-72d2-44d8-a4b1-6f9f3ca6b54a" />
-<img width="654" height="659" alt="Screenshot 2025-11-29 at 12 33 16 PM" src="https://github.com/user-attachments/assets/daf68bc6-777f-46bc-afe2-f25fe3ccd615" />
-<img width="666" height="865" alt="Screenshot 2025-11-29 at 12 33 46 PM" src="https://github.com/user-attachments/assets/ddc25dd8-b2eb-4995-8218-05184d2bef3f" />
-
-
+<img width="649" height="633" alt="Screenshot 2025-11-29 at 8 34 36 PM" src="https://github.com/user-attachments/assets/06e54785-8e3c-46ae-8840-600db705d84a" />
+<img width="646" height="630" alt="Screenshot 2025-11-29 at 8 35 03 PM" src="https://github.com/user-attachments/assets/ed753473-6c38-4502-ad39-38aa06b7d331" />
+<img width="644" height="602" alt="Screenshot 2025-11-29 at 8 35 27 PM" src="https://github.com/user-attachments/assets/b6d447ca-8b6f-4c9b-920d-3eff9ead9bc0" />
+<img width="645" height="651" alt="Screenshot 2025-11-29 at 8 35 50 PM" src="https://github.com/user-attachments/assets/205e3568-d94a-429b-80ab-8520a3f88295" />
+<img width="644" height="623" alt="Screenshot 2025-11-29 at 8 36 12 PM" src="https://github.com/user-attachments/assets/106e5aa0-0516-4f71-8f7f-036f68514c79" />
+<img width="640" height="229" alt="Screenshot 2025-11-29 at 8 36 59 PM" src="https://github.com/user-attachments/assets/02a66888-2c9d-48d3-9ee5-fba40abff922" />
 
 Data Visualizations:
 
