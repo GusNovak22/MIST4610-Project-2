@@ -44,6 +44,8 @@ Data Visualizations:
 
 <img width="1167" height="670" alt="Screenshot 2025-11-30 at 6 05 48 PM" src="https://github.com/user-attachments/assets/3d59a7b5-4f58-4994-9b36-6436104a9c97" />
 
+https://app.powerbi.com/links/bPBe75y1Ic?ctid=a8216c1e-4d63-4352-8c3b-50fa1f1475b1&pbi_source=linkShare
+
 Executive Summary of Dashboard: 
 This dashboard provides a comprehensive operational overview of flight activity, workforce distribution, and airline performance at Jackson Hole Airport. By integrating flight records, employee data, and airline schedules, the dashboard delivers insights into the airport's operational efficiency during the early January travel period, one of the busiest months for Jackson Hole due to winter tourism. The visualizations highlight three critical areas: flight reliability, daily traffic patterns, and resource allocation. 
 
