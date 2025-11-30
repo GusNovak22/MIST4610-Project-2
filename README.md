@@ -113,3 +113,7 @@ Query #5: How many passengers per day depart from Jackson Hole Airport and which
     WHERE Flight.DepartureAirportID = 'JAC' AND TIME(Flight.DepartureTime) < '08:00:00'
     GROUP BY Airline.AirlineCode, Flight.Date
     ORDER BY Flight.Date, Airline.AirlineCode;
+
+
+
+<img width="647" height="499" alt="Screenshot 2025-11-30 at 2 29 20 PM" src="https://github.com/user-attachments/assets/439dcf01-0503-4366-b8a4-2d7875a20656" />
