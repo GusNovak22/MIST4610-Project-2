@@ -99,8 +99,8 @@ Query #4: How many flights depart or arrive at Dallas Fort Worth Airport for eac
     JOIN Airline ON Aircraft.AirlineCode = Airline.AirlineCode 
     WHERE Flight.DepartureAirportID = 'DFW' OR Flight.ArrivalAirportID = 'DFW' 
     GROUP BY Airline.AirlineCode, Airline.AirlineName, Date 
-    ORDER BY Date, Airline.AirlineCode DESC;
+    ORDER BY Date;
 
-This query counts the departures or arrivals at the Dallas Fort Worth Airport (DFW). It selects from the flight table which contains the date and airline code for each flight. It joins the Airline table so it can retreive the name of the Airline. The data is then filtered for only departure or arrival IDs values containing DFW and records a count for the occurence of each. The results are grouped by airline code, airline name and date and returned in order of date. The query returns the code and name of the airline along with the date of the flight and how many departures or arrivals on that day. This would tell management how frequently each airline is using the airport.  
+This query counts the departures or arrivals at the Dallas Fort Worth Airport (DFW). It selects from the flight table which contains the date and airline code for each flight. It joins the Airline table so it can retreive the name of the Airline. The data is then filtered for only departure or arrival IDs containing DFW and records a count for the occurence of each. The results are grouped by airline code, airline name and date and returned in order of date. The query returns the code and name of the airline along with the date of the flight and how many departures or arrivals on that day. This would tell management how frequently each airline is using the airport.  
 
 Query #5:
