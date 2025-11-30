@@ -96,7 +96,8 @@ Query #3: Who are the Managers of the maintence department at each airport and h
 Query #4: How many flights depart or arrive at Dallas Fort Worth Airport for each airline in a day?
 
     SELECT Airline.AirlineCode, Airline.AirlineName, Date, COUNT(CASE WHEN Flight.DepartureAirportID = 'DFW' THEN 1 END) AS Departures, COUNT(CASE WHEN Flight.ArrivalAirportID = 'DFW' THEN 1 END) AS Arrivals 
-    FROM Flight 
+    FROM Flight
+    JOIN Aircraft ON Flight.AircraftID = Aircraft.AircraftID
     JOIN Airline ON Aircraft.AirlineCode = Airline.AirlineCode 
     WHERE Flight.DepartureAirportID = 'DFW' OR Flight.ArrivalAirportID = 'DFW' 
     GROUP BY Airline.AirlineCode, Airline.AirlineName, Date 
@@ -104,9 +105,9 @@ Query #4: How many flights depart or arrive at Dallas Fort Worth Airport for eac
 
 <img width="368" height="360" alt="Screenshot 2025-11-30 at 3 20 41 PM" src="https://github.com/user-attachments/assets/02b9a9ad-f1f3-4166-9e77-77e441007389" />
 
-This query counts the departures or arrivals at the Dallas Fort Worth Airport (DFW). It selects from the flight table which contains the date and airline code for each flight. It joins the Airline table so it can retreive the name of the Airline. The data is then filtered for only departure or arrival IDs containing DFW and records a count for the occurence of each. The results are grouped by airline code, airline name and date and returned in order of date. The query returns the code and name of the airline along with the date of the flight and how many departures or arrivals on that day. This would tell management how frequently each airline is using the airport.  
+This query counts the departures or arrivals at the Dallas Fort Worth Airport (DFW). It selects from the flight table which contains the date and airline code for each flight. It joins the Aircraft and Airline table so it can retreive the name of the Airline. The data is then filtered for only departure or arrival IDs containing DFW and records a count for the occurence of each. The results are grouped by airline code, airline name and date and returned in order of date. The query returns the code and name of the airline along with the date of the flight and how many departures or arrivals on that day. This would tell management how frequently each airline is using the airport.  
 
-Query #5: How many passengers per day depart from Jackson Hole Airport and which Airline are they flying?
+Query #5: How many passengers per day depart before 8 AM from Jackson Hole Airport and which Airline are they flying?
 
     SELECT Airline.AirlineCode, Flight.Date, COUNT(Passenger_has_Flight.PassengerID) AS Passengers 
     FROM Passenger_has_Flight 
@@ -119,8 +120,7 @@ Query #5: How many passengers per day depart from Jackson Hole Airport and which
 
 <img width="215" height="179" alt="Screenshot 2025-11-30 at 3 23 49 PM" src="https://github.com/user-attachments/assets/91ed7a14-b003-4685-baf3-5fd45c55153b" />
 
+This query joins the Passenger_has_Flight table to Flight, Flight to Aircraft, and Aircraft to Airline. It then filters for only the flights that depart from Jackson Hole before 8AM. It groups the data by airline code and date so the return will count the passengers for each airline by day. The order by is just to organize the return so that it is returned in order of the departure date and so that if there were flights from each airline they would return in the same order for every day. This information could be useful because it could reveal which days have heavier foot traffic in the mornings. This could relate to the amount of staffing the airport would need at these times. Also, this could tell management which airlines schedule more early morning flights.
 
-
-
-
-<img width="647" height="499" alt="Screenshot 2025-11-30 at 2 29 20 PM" src="https://github.com/user-attachments/assets/439dcf01-0503-4366-b8a4-2d7875a20656" />
+Query Matrix:
+<img width="640" height="488" alt="Screenshot 2025-11-30 at 3 57 18 PM" src="https://github.com/user-attachments/assets/5d71dbcc-525f-4001-89da-fb5f1f162bbd" />
