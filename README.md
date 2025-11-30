@@ -102,6 +102,8 @@ Query #4: How many flights depart or arrive at Dallas Fort Worth Airport for eac
     GROUP BY Airline.AirlineCode, Airline.AirlineName, Date 
     ORDER BY Date;
 
+<img width="368" height="360" alt="Screenshot 2025-11-30 at 3 20 41 PM" src="https://github.com/user-attachments/assets/02b9a9ad-f1f3-4166-9e77-77e441007389" />
+
 This query counts the departures or arrivals at the Dallas Fort Worth Airport (DFW). It selects from the flight table which contains the date and airline code for each flight. It joins the Airline table so it can retreive the name of the Airline. The data is then filtered for only departure or arrival IDs containing DFW and records a count for the occurence of each. The results are grouped by airline code, airline name and date and returned in order of date. The query returns the code and name of the airline along with the date of the flight and how many departures or arrivals on that day. This would tell management how frequently each airline is using the airport.  
 
 Query #5: How many passengers per day depart from Jackson Hole Airport and which Airline are they flying?
@@ -114,6 +116,10 @@ Query #5: How many passengers per day depart from Jackson Hole Airport and which
     WHERE Flight.DepartureAirportID = 'JAC' AND TIME(Flight.DepartureTime) < '08:00:00'
     GROUP BY Airline.AirlineCode, Flight.Date
     ORDER BY Flight.Date, Airline.AirlineCode;
+
+<img width="215" height="179" alt="Screenshot 2025-11-30 at 3 23 49 PM" src="https://github.com/user-attachments/assets/91ed7a14-b003-4685-baf3-5fd45c55153b" />
+
+
 
 
 
