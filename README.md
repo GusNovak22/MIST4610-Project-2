@@ -12,6 +12,8 @@ Caden Floyd | cadenfloyd7@uga.edu | [cflo-7](https://github.com/cflo-7)
 
 <img width="953" height="685" alt="Screenshot 2025-11-29 at 9 18 29 PM" src="https://github.com/user-attachments/assets/43f7b049-9878-46c0-a23c-6897b9061770" />
 
+<img width="960" height="688" alt="Screenshot 2025-11-30 at 2 37 39 PM" src="https://github.com/user-attachments/assets/f80e62e1-8392-4433-9a3c-9473ad215aaa" />
+
 Data Model Explanation: 
 
 This database models the core operational aspects of Jackson Hole Airport which serves as the primary commercial airport for Jackson, Wyoming and the surrounding Teton County region. Despite being a smaller airport, it plays a critical role in supporting both tourism and local transportation, particularly due to its proximity to Grand Teton National Park and Jackson Hole Mountain Resort. 
