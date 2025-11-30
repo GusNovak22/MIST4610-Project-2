@@ -40,8 +40,6 @@ The AirportEmp table stores airport staff such as TSA officers, ground crew, gat
 
 Data Visualizations:
 
-<img width="1201" height="685" alt="image" src="https://github.com/user-attachments/assets/68fc3bb9-a41c-4ac2-90d3-56cfdd5dfa9f" />
-
 <img width="1167" height="670" alt="Screenshot 2025-11-30 at 6 05 48 PM" src="https://github.com/user-attachments/assets/3d59a7b5-4f58-4994-9b36-6436104a9c97" />
 
 https://app.powerbi.com/links/bPBe75y1Ic?ctid=a8216c1e-4d63-4352-8c3b-50fa1f1475b1&pbi_source=linkShare
