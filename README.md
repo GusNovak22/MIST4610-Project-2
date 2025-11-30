@@ -122,5 +122,7 @@ Query #5: How many passengers per day depart before 8 AM from Jackson Hole Airpo
 
 This query joins the Passenger_has_Flight table to Flight, Flight to Aircraft, and Aircraft to Airline. It then filters for only the flights that depart from Jackson Hole before 8AM. It groups the data by airline code and date so the return will count the passengers for each airline by day. The order by is just to organize the return so that it is returned in order of the departure date and so that if there were flights from each airline they would return in the same order for every day. This information could be useful because it could reveal which days have heavier foot traffic in the mornings. This could relate to the amount of staffing the airport would need at these times. Also, this could tell management which airlines schedule more early morning flights.
 
+
 Query Matrix:
+
 <img width="640" height="488" alt="Screenshot 2025-11-30 at 3 57 18 PM" src="https://github.com/user-attachments/assets/5d71dbcc-525f-4001-89da-fb5f1f162bbd" />
