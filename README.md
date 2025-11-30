@@ -92,6 +92,15 @@ Query #3: Who are the Managers of the maintence department at each airport and h
 
    This query pulls the full name of maintenance bosses at all airports and give the amount of employees they supervise. The query first performs a recursive join of the AirportEmp table creating a Boss and Emp copy. These tables are joined by The Boss table's AirportEmpID and the Emp table's AirportEmpManagerID. The Emp value represents who they report to which matches to another employee in the boss table. The Airport table is then joined so that the AirportName each manager works at can be pulled. The WHERE clause then adds a constraint in which we only pull managers of "Maintenance" departments. The GROUP BY clause ensures that the aggregated count function is grouped by the boss of each airport. This data would be useful for airport management to ensure proper supervision of subordinates and discipline for failure to meet maintenance standards.
 
-Query #4:
+Query #4: How many flights depart or arrive at Dallas Fort Worth Airport for each airline in a day?
+
+    SELECT Airline.AirlineCode, Airline.AirlineName, Date, COUNT(CASE WHEN Flight.DepartureAirportID = 'DFW' THEN 1 END) AS Departures, COUNT(CASE WHEN Flight.ArrivalAirportID = 'DFW' THEN 1 END) AS Arrivals 
+    FROM Flight 
+    JOIN Airline ON Aircraft.AirlineCode = Airline.AirlineCode 
+    WHERE Flight.DepartureAirportID = 'DFW' OR Flight.ArrivalAirportID = 'DFW' 
+    GROUP BY Airline.AirlineCode, Airline.AirlineName, Date 
+    ORDER BY Date, Airline.AirlineCode DESC;
+
+This query counts the departures or arrivals at the Dallas Fort Worth Airport (DFW). It selects from the flight table which contains the date and airline code for each flight. It joins the Airline table so it can retreive the name of the Airline. The data is then filtered for only departure or arrival IDs values containing DFW and records a count for the occurence of each. The results are grouped by airline code, airline name and date and returned in order of date. The query returns the code and name of the airline along with the date of the flight and how many departures or arrivals on that day. This would tell management how frequently each airline is using the airport.  
 
 Query #5:
